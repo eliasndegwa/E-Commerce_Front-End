@@ -1,0 +1,27 @@
+header{
+    background: #fff;
+    border-bottom: 2px solid #520852;
+    padding: 1rem;
+    margin: 1rem;
+}
+a{
+    color: #520852;
+}
+a:hover{
+    color: #df4adf;
+}
+.container{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+li{
+    list-style-type: none;
+}

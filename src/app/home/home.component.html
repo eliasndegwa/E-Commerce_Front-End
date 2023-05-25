@@ -1,0 +1,15 @@
+<ul>
+    <li *ngFor="let food of foods">
+        <a href="#">
+            <img src="{{food.product_image}}" alt="product photo">
+            <div class="content">
+                <div class="name">
+                    {{food.product_name}}
+                </div>
+                <div class="price">
+                    {{food.product_price |currency:'KSH '}}
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>

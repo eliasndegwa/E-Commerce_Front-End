@@ -1,0 +1,38 @@
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+li a{
+    color: black;
+    height: 16rem;
+    width: 20rem;
+    border: 2px solid #520852;
+    border-radius: 1rem;
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: .9;
+}
+li a:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+img{
+    border-top: .8rem;
+}
+
+.content{
+    padding: .5rem 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.price{
+    font-weight: 700;
+}
