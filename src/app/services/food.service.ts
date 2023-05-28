@@ -1,18 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Food } from '../models/food';
-import { retry } from 'rxjs';
+import { Tag } from '../models/tag';
 @Injectable({
   providedIn: 'root'
 })
 export class FoodService {
 
   constructor() { }
-  getAllFoodsByTag(tag:string):Food[]{
-    if(tag==='All'){
-      return this.getAll()
-    }
-    return this.getAll().filter(food=>food.tags?.includes(tag))
-  }
+
   getAll():Food[]{
     return[
         {
@@ -64,5 +59,25 @@ export class FoodService {
           tags:['milk']
         }
     ]
+  }
+
+  getAllFoodsBySearch(searchTerm: string):Food[]{
+    return this.getAll().filter(food=>food.product_name.toLowerCase().includes(searchTerm.toLowerCase()))
+  }
+
+  getAllTags():Tag[]{
+    return[
+      {name:'All'},
+      {name:'alcohol'},
+      {name:'milk'},
+      {name:'soft-drink'}
+    ]
+  }
+
+  getAllFoodsByTag(tag:string):Food[]{
+    if(tag==='All'){
+      return this.getAll()
+    }
+    return this.getAll().filter(food=>food.tags?.includes(tag))
   }
 }

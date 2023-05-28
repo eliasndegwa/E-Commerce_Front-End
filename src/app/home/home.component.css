@@ -27,6 +27,9 @@ header{
     color: #df4adf;
 }
 /* Main body */
+.container{
+    display: flex;
+}
 .container ul{
     display: flex;
     align-items: center;
