@@ -1,0 +1,22 @@
+.search input{
+    height: 2.5rem;
+    border: none;
+    border-radius: 1rem 0 0 1rem;
+    padding: 1rem;
+    background-color: #e4e4e4;
+    outline: none;
+}
+
+.search button{
+    color: #fff;
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 0 1rem 1rem 0;
+    border: none;
+    background-color: #520852;
+    outline: none;
+}
+.search button:hover{
+    background-color: #df4adf;
+    cursor: pointer;
+}

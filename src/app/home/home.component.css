@@ -1,4 +1,33 @@
-ul{
+/* header */
+header{
+    background: #fff;
+    border-bottom: 2px solid #520852;
+    padding: 1rem;
+    margin: 1rem;
+}
+.nav-container{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-container nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.nav-container ul li{
+    list-style-type: none;
+}
+.nav-container ul li a{
+    color: #520852;
+}
+.nav-container ul li a:hover{
+    color: #df4adf;
+}
+/* Main body */
+.container ul{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,7 +35,7 @@ ul{
     list-style-type: none;
 }
 
-li a{
+.container ul li a{
     color: black;
     height: 16rem;
     width: 20rem;
@@ -18,11 +47,11 @@ li a{
     overflow: hidden;
     opacity: .9;
 }
-li a:hover{
+.container ul li a:hover{
     opacity: 1;
     cursor: pointer;
 }
-img{
+.container ul li a img{
     border-top: .8rem;
 }
 

@@ -4,21 +4,9 @@
             <a href="#" routerLink="/" class="logo">Logo</a>
         </div>
         <div class="search">
-            <input type="text" name="" id="">
-            <button type="submit">Search</button>
-        </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#" routerLink="/cart">Cart</a>
-                </li>
-                <li>
-                    <a href="#" routerLink="/login">Login</a>
-                </li>
-                <li>
-                    <a href="#" routerLink="/register">Register</a>
-                </li>
-            </ul>
-        </nav>
+            <input type="text" placeholder="search products" (ngModel)="searchTerm">
+            <button (click)="search()">Search</button>
+</div>
+        
     </div>
 </header>

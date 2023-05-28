@@ -1,12 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Food } from '../interfaces/food';
+import { Food } from '../models/food';
+import { retry } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class FoodService {
 
   constructor() { }
-
+  getAllFoodsByTag(tag:string):Food[]{
+    if(tag==='All'){
+      return this.getAll()
+    }
+    return this.getAll().filter(food=>food.tags?.includes(tag))
+  }
   getAll():Food[]{
     return[
         {
@@ -15,7 +21,7 @@ export class FoodService {
           description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident nam accusantium nostrum ipsa expedita!',
           product_price:60,
           product_image:'/assets/images/2d567e496694416d371eae22f15435d7.jpeg',
-          tags:['soft drink']
+          tags:['milk']
         },
         {
           product_id:'2',
@@ -23,7 +29,7 @@ export class FoodService {
           description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident nam accusantium nostrum ipsa expedita!',
           product_price:60,
           product_image:'assets/images/2fc66dfcd00ba7030bcf3cf0152a02a3.jpeg',
-          tags:['soft drink']
+          tags:['soft-drink']
         },
         {
           product_id:'3',
@@ -31,7 +37,7 @@ export class FoodService {
           description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident nam accusantium nostrum ipsa expedita!',
           product_price:60,
           product_image:'/assets/images/maxresdefault.jpg',
-          tags:['soft drink']
+          tags:['alcohol']
         },
         {
           product_id:'4',
@@ -39,7 +45,7 @@ export class FoodService {
           description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident nam accusantium nostrum ipsa expedita!',
           product_price:60,
           product_image:'assets/images/ScreenShot_20230522214256.jpeg',
-          tags:['soft drink']
+          tags:['soft-drink']
         },
         {
           product_id:'5',
@@ -47,7 +53,7 @@ export class FoodService {
           description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident nam accusantium nostrum ipsa expedita!',
           product_price:60,
           product_image:'/assets/images/ScreenShot_20230522215012.jpeg',
-          tags:['soft drink']
+          tags:['alcohol']
         },
         {
           product_id:'6',
@@ -55,7 +61,7 @@ export class FoodService {
           description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident nam accusantium nostrum ipsa expedita!',
           product_price:60,
           product_image:'/assets/images/ScreenShot_20230522215148.jpeg',
-          tags:['soft drink']
+          tags:['milk']
         }
     ]
   }
