@@ -80,4 +80,8 @@ export class FoodService {
     }
     return this.getAll().filter(food=>food.tags?.includes(tag))
   }
+
+  getFoodById(product_id:string):Food{
+    return this.getAll().find(food=>food.product_id==product_id)!
+  }
 }
