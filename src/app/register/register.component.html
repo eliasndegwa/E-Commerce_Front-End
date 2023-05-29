@@ -1,13 +1,11 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
 <body>
     <div class="container">
         <div class="register-page">
-            <div class="logo">
+            <!-- <div class="logo">
                 <a href="#" routerLink="/" class="logo">Logo</a>
-            </div>
+            </div> -->
+
             <!-- Register Page -->
             <form action="" (ngSubmit)="onRegisterSubmit()" #form="ngForm">
                 <h1 class="title">Register</h1>
@@ -36,7 +34,13 @@
                 <!-- submit button -->
                 <button type="submit" [disabled]="!form.valid">Register</button>
             </form>
+            <!-- register page end -->
             </div>
+
+            <div class="toLoginMobile">
+                <p class="account-text">Already one of Us? <a href="#" routerLink="/login">Login</a></p>
+            </div>
+
             <div class="switchPage">
                 <div class="content">
                     <h1>Welcome <span>to the</span> family!</h1>

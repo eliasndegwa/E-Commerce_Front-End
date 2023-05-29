@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Kumbh Sans', sans-serif;
-    letter-spacing: 3px;
   }
   body {
     display: flex;
@@ -74,6 +72,10 @@
     font-weight: 600;
     color: #444;
   }
+  .error{
+    color: red;
+    font-size: 15px;
+}
   button{
     width: 150px;
     height: 50px;
@@ -90,14 +92,13 @@
     background: linear-gradient(-50deg,#520852,#df4adf,#003200,#001D00);
     
   }
-  .account-text{
-    font-size: 18px;
-  }
   a {
     text-decoration: none;
     color: #df4adf;
   }
-  
+  .toLoginMobile{
+    display: none;
+}
   .switchPage{
     background: linear-gradient(-50deg,#003200,#001D00);
     width: 100%;
@@ -105,7 +106,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
   }
   .content{
     display: flex;
@@ -145,4 +147,40 @@
     color: #df4adf;
     font-weight: 600;
     text-transform: uppercase;
+}
+/* responsiveness */
+@media (max-width:779px) {
+  .container {
+      width: 100vw;
+      height: 100vh;
+      box-shadow: none;
+  }
+}
+@media (max-width:635px) {
+  form {
+      width: 80%;
+  }
+
+  .container{
+      display: flex;
+      flex-direction: column;
+      box-shadow: none;
+      height: 60vh;
+  }
+  .register-page{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .switchPage {
+      display: none;
+  }
+  .toLoginMobile {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -30px;
+  }
 }
