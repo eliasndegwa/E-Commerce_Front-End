@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+<body>
+    <div class="container">
+        <div class="login-page">
+            <div class="logo">
+                <a href="#" routerLink="/" class="logo">Logo</a>
+            </div>
+            <!-- login page -->
+            <form action="" (ngSubmit)="onLoginSubmit()" #form="ngForm">
+                <h1 class="title">Login</h1>
+
+                <!-- input email -->
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="email" placeholder="Email" ngModel name="email" required email #email="ngModel">
+                </div>
+                <p class="error" *ngIf="!email.value && email.touched">Please enter your email*</p>
+
+                <!-- input password -->
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" ngModel name="password" required #password="ngModel">
+                </div>
+                <p class="error" *ngIf="!password.value && password.touched">Please enter your password*</p>
+
+                <!-- submit button -->
+                <button type="submit" [disabled]="!form.valid">Login</button>
+                <p>Forgot Password? <a href="#" id="forgot">Reset Password</a></p>
+            </form>
+            <!-- login page end -->
+
+        </div>
+        <div class="switchPage">
+            <div class="content">
+                <h1>Welcome <span>Back!</span></h1>
+                <img src="../../assets/signin.svg" alt="" class="image">
+            </div>
+            <div class="toRegister">
+                <p class="account-text">New Here? <a href="#" routerLink="/register" >Register</a></p>
+            </div>
+        </div>
+    </div>
+</body>
