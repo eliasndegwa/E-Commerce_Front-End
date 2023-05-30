@@ -26,7 +26,22 @@
 
                 <!-- submit button -->
                 <button type="submit" [disabled]="!form.valid">Login</button>
-                <p>Forgot Password? <a href="#" id="forgot">Reset Password</a></p>
+                <!-- Forgot Password Modal start -->
+                <p>Forgot Password? <a class="open-modal" (click)="openModal()">Reset Password</a></p>
+                <!-- modalcontent start -->
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close" (click)="closeModal()">&times;</span>
+                        <h2>Enter your email:</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="email" placeholder="Email" ngModel name="email" required email #email="ngModel">
+                        </div>
+                        <button (click)="resetPassword()">reset</button>
+                    </div>
+                </div>
+                <!-- modalcontent end -->
+                <!-- Forgot Password Modal end -->
             </form>
             <!-- login page end -->
 
