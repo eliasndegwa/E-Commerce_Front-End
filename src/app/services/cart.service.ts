@@ -8,23 +8,23 @@ import { CartItem } from '../models/CartItem';
 })
 export class CartService {
   private cart:Cart=new Cart()
-  constructor() { }
-  
-  changeQuantity(productId:number|string,quantity:number){
-    let cartItem:any=this.cart.items.find(item=>item.food.product_id===productId)
-    if(cartItem)return;
-    cartItem.quantity=quantity
-  }
+
   addToCart(food:Food):void{
     let cartItem=this.cart.items.find(item=>item.food.product_id===food.product_id)
     if(cartItem){
-      this.changeQuantity(food.product_id,cartItem.quantity+1)
+      this.changeQuantity(food.product_id,cartItem.quantity + 1)
       return;
     }
     this.cart.items.push(new CartItem(food))
   }
 
-  removeFromCart(productId:number|string):void{
+  changeQuantity(productId:string,quantity:number){
+    let cartItem=this.cart.items.find(item=>item.food.product_id===productId)
+    if(!cartItem) return;
+    cartItem.quantity=quantity
+  }
+
+  removeFromCart(productId:string):void{
     this.cart.items=this.cart.items.filter(item=>item.food.product_id!=productId)
   }
 

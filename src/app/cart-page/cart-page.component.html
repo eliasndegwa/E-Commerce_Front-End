@@ -1,4 +1,6 @@
-<div class="container">
+<app-notfound [visible]="!cart || cart.items.length<=0"notFoundMessage="Cart is empty"
+resetLink="Go Back"></app-notfound>
+<div class="container" *ngIf="cart && cart.items.length>0">
     <ul>
         <li *ngFor="let cartItem of cart.items">
             <div class="image">

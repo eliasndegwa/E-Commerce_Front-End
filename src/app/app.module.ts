@@ -11,6 +11,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CartPageComponent } from './cart-page/cart-page.component';
         ProductPageComponent,
         LoginComponent,
         RegisterComponent,
-        CartPageComponent
+        CartPageComponent,
+        NotfoundComponent
     ],
     providers: [],
     bootstrap: [AppComponent],

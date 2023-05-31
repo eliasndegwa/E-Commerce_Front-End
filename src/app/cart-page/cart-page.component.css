@@ -45,12 +45,20 @@ ul li select{
     border: none;
     border-bottom: 1px solid #000;
 }
-.remove button,.order button{
-    border-radius: 1rem;
+.remove-btn,.order button{
+    width: 150px;
+    height: 50px;
     border: none;
-    padding: .5rem;
-    color: blueviolet;
-    outline: none;
+    border-radius: 50px;
+    background: linear-gradient(50deg,#520852,#df4adf,#003200,#001D00);
+    color: #fff;
+    font-weight: 600;
+    margin: 10px 0;
+    text-transform: uppercase;
+    cursor: pointer;;
+}
+.remove-btn,.order button:hover{
+    background: linear-gradient(-50deg,#520852,#df4adf,#003200,#001D00);
 }
 .checkout{
     display: flex;
