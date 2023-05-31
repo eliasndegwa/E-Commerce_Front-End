@@ -14,7 +14,7 @@ export class FoodService {
           product_id:'1',
           product_name:'Cocacola',
           description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident nam accusantium nostrum ipsa expedita!',
-          product_price:60,
+          product_price:90,
           product_image:'/assets/images/2d567e496694416d371eae22f15435d7.jpeg',
           tags:['milk']
         },
@@ -22,7 +22,7 @@ export class FoodService {
           product_id:'2',
           product_name:'Fanta',
           description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident nam accusantium nostrum ipsa expedita!',
-          product_price:60,
+          product_price:50,
           product_image:'assets/images/2fc66dfcd00ba7030bcf3cf0152a02a3.jpeg',
           tags:['soft-drink']
         },
@@ -38,7 +38,7 @@ export class FoodService {
           product_id:'4',
           product_name:'Krest',
           description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident nam accusantium nostrum ipsa expedita!',
-          product_price:60,
+          product_price:58,
           product_image:'assets/images/ScreenShot_20230522214256.jpeg',
           tags:['soft-drink']
         },
@@ -46,7 +46,7 @@ export class FoodService {
           product_id:'5',
           product_name:'Stoney',
           description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident nam accusantium nostrum ipsa expedita!',
-          product_price:60,
+          product_price:70,
           product_image:'/assets/images/ScreenShot_20230522215012.jpeg',
           tags:['alcohol']
         },
@@ -54,7 +54,7 @@ export class FoodService {
           product_id:'6',
           product_name:'Monster',
           description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident nam accusantium nostrum ipsa expedita!',
-          product_price:60,
+          product_price:160,
           product_image:'/assets/images/ScreenShot_20230522215148.jpeg',
           tags:['milk']
         }

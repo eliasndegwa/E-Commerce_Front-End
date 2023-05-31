@@ -10,6 +10,7 @@ import { TagsComponent } from './tags/tags.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { RegisterComponent } from './register/register.component';
         TagsComponent,
         ProductPageComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+        CartPageComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
