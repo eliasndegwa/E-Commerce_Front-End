@@ -1,0 +1,12 @@
+<div class="tags" *ngIf="tags" [style.justifyContent]="justifyContent">
+    <a *ngFor="let tag of tags" routerLink="/category/{{tag.name}}">
+        {{tag.name}}
+    </a>
+</div>
+
+<div class="tags" *ngIf="productPageCategories" [style.justifyContent]="justifyContent">
+    <a *ngFor="let categoryName of productPageCategories" routerLink="/category/{{categoryName}}">
+        {{categoryName}}
+    </a>
+</div>
+

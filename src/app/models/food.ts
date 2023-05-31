@@ -4,5 +4,5 @@ export class Food{
     description!:string
     product_price!:number
     product_image!:string
-    tags!:string[]
+    category!:string[]
 }

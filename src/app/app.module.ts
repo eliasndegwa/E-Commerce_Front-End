@@ -6,7 +6,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
-import { TagsComponent } from './tags/tags.component';
+import { CategoriesComponent } from './categories/categories.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -19,7 +19,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
         AppComponent,
         HomeComponent,
         SearchComponent,
-        TagsComponent,
+        CategoriesComponent,
         ProductPageComponent,
         LoginComponent,
         RegisterComponent,
